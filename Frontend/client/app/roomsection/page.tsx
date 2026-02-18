@@ -4,6 +4,8 @@ import { useEffect, useRef, useState } from "react"
 import { useRouter } from "next/navigation"
 import { Video  , Keyboard} from "lucide-react"
 import { Features } from "../Components/Features"
+import { ToastContainer, toast } from 'react-toastify';
+
 
 
 export default function() {
@@ -21,7 +23,7 @@ export default function() {
 
     if(socket.current){
         socket.current.onopen = ()=>{
-          alert("Room is opened")
+          toast.success("Room is opened")
         }
     }
 
@@ -91,6 +93,8 @@ export default function() {
        </div>
        
        <Features></Features>
+
+       <ToastContainer></ToastContainer>
 
     </div>
   </>

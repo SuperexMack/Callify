@@ -73,9 +73,7 @@ export default function(){
     },[])
 
      const cutcall = ()=>{
-       setTimeout(()=>{
-          router.push("/")
-       },2000)
+        window.location.href = "/roomsection"
     }
 
 

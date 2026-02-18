@@ -9,14 +9,14 @@ const httpserver = app.listen(PORT)
 
 const wss = new WebSocketServer({server:httpserver})
 
-// app.use(cors({
-//    origin:"https://webrtc-struct.vercel.app",
-//    methods: ["GET", "POST"],
-//    allowedHeaders : ["Content-Type","Authorization"]
-// }))
+app.use(cors({
+   origin:"https://callify-mu.vercel.app",
+   methods: ["GET", "POST"],
+   allowedHeaders : ["Content-Type","Authorization"]
+}))
 
 app.get("/",(req,res)=>{
-  return res.json({msg:"v2"})
+  return res.json({msg:"This is the V1 of Callify"})
 })
 
 
@@ -45,6 +45,7 @@ wss.on("connection",(ws)=>{
         if (!rooms[message.roomId]) rooms[message.roomId] = []
         
         rooms[message.roomId][1] = ws
+        rooms[message.roomId][0].send(JSON.stringify({Majorinfo:"UserArrived"}))
         ws.send(JSON.stringify({msg:"REMOTE",roomId:message.roomId}))
         
        }

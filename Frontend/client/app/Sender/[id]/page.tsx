@@ -3,6 +3,7 @@ import { useEffect, useRef, useState } from "react"
 import { useParams } from "next/navigation"
 import {Phone, PhoneOff} from "lucide-react"
 import { useRouter } from "next/navigation"
+import { ToastContainer, toast } from 'react-toastify';
 
 
 
@@ -33,6 +34,9 @@ export default function(){
 
       socket.current.onmessage = async(event)=>{
         let myallmesssage = JSON.parse(event.data)
+        if(myallmesssage.Majorinfo === "UserArrived"){
+          toast.success("User Arrived now start the call")
+        }
         if(myallmesssage.msg === "create-offer" || myallmesssage.msg === "create-answer")console.log(myallmesssage.roomMsg)
         if(myallmesssage.msg === "create-answer"){
             await pc.current?.setRemoteDescription(myallmesssage.sdp)
@@ -77,9 +81,7 @@ export default function(){
 
 
     const cutcall = ()=>{
-       setTimeout(()=>{
-          router.push("/")
-       },2000)
+       window.location.href = "/roomsection"
     }
 
 
@@ -139,6 +141,7 @@ export default function(){
                     <h1 className="text-white font-bold text-center">Cut Call</h1>
                  </div>
             </div>
+            <ToastContainer></ToastContainer>
         </div>
 
 
