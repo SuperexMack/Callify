@@ -4,39 +4,40 @@ export function AnimatedTestimonialsDemo() {
   const testimonials = [
     {
       quote:
-        "The attention to detail and innovative features have completely transformed our workflow. This is exactly what we've been looking for.",
-      name: "Sarah Chen",
-      designation: "Product Manager at TechFlow",
-      src: "https://images.unsplash.com/photo-1535713875002-d1d0cf377fde?q=80&w=3560&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
+        "Connect instantly with a secure one-on-one video calling system built using WebRTC for low latency and high-quality streaming.",
+      name: "Feature 01",
+      designation: "One-on-One Video Calling",
+      src: "https://images.unsplash.com/photo-1587560699334-cc4ff634909a?q=80&w=3000&auto=format&fit=crop",
     },
     {
       quote:
-        "Implementation was seamless and the results exceeded our expectations. The platform's flexibility is remarkable.",
-      name: "Michael Rodriguez",
-      designation: "CTO at InnovateSphere",
-      src: "https://images.unsplash.com/photo-1438761681033-6461ffad8d80?q=80&w=3540&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
+        "Create or join private rooms with a unique room ID, making it easy to start calls without any complex setup.",
+      name: "Feature 02",
+      designation: "Room-Based Calling",
+      src: "https://images.unsplash.com/photo-1609921212029-bb5a28e60960?q=80&w=3000&auto=format&fit=crop",
     },
     {
       quote:
-        "This solution has significantly improved our team's productivity. The intuitive interface makes complex tasks simple.",
-      name: "Emily Watson",
-      designation: "Operations Director at CloudScale",
-      src: "https://images.unsplash.com/photo-1623582854588-d60de57fa33f?q=80&w=3540&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
+        "Experience real-time audio and video synchronization with optimized peer-to-peer connections.",
+      name: "Feature 03",
+      designation: "Real-Time Streaming",
+      src: "https://images.unsplash.com/photo-1551836022-d5d88e9218df?q=80&w=3000&auto=format&fit=crop",
     },
     {
       quote:
-        "Outstanding support and robust features. It's rare to find a product that delivers on all its promises.",
-      name: "James Kim",
-      designation: "Engineering Lead at DataPro",
-      src: "https://images.unsplash.com/photo-1636041293178-808a6762ab39?q=80&w=3464&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
+        "Simple and intuitive UI that lets users start a video call in just a few clicks—no learning curve required.",
+      name: "Feature 04",
+      designation: "Minimal & Clean UI",
+      src: "https://images.unsplash.com/photo-1519389950473-47ba0277781c?q=80&w=3000&auto=format&fit=crop",
     },
     {
       quote:
-        "The scalability and performance have been game-changing for our organization. Highly recommend to any growing business.",
-      name: "Lisa Thompson",
-      designation: "VP of Technology at FutureNet",
-      src: "https://images.unsplash.com/photo-1624561172888-ac93c696e10c?q=80&w=2592&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
+        "Built to perform reliably even on unstable networks, ensuring smooth communication without frequent drops.",
+      name: "Feature 05",
+      designation: "Stable Connection Handling",
+      src: "https://images.unsplash.com/photo-1600267165477-6d4cc741b379?q=80&w=3000&auto=format&fit=crop",
     },
   ];
+
   return <AnimatedTestimonials testimonials={testimonials} />;
 }
