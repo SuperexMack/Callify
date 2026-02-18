@@ -13,7 +13,7 @@ export default function Footer({ myref }: any) {
           <div className="w-[500px]  h-full p-7  flex flex-col space-y-5">
             <div className=" flex  space-x-2">
               <Videotape className="h-[50px] w-[50px] text-blue-600"></Videotape>
-              <h1 className="text-[40px] font-bold">Callify</h1>
+              <h1 className="text-[40px] font-bold toptext">Callify</h1>
             </div>
 
             <div className="md:w-[70%] w-full">

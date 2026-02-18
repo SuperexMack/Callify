@@ -12,7 +12,7 @@ export function Features(){
           <div className="flex justify-between">
 
             <div className="w-[45%]">
-                 <h1 className="text-[30px] font-bold maintext">Everything for a great call.Nothing you don't need.</h1>
+                 <h1 className="text-[30px] font-bold maintext">Everything for a great call.You don't need Anything else</h1>
             </div> 
 
              <div className="w-[45%]">
