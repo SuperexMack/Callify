@@ -24,6 +24,10 @@
   font-style: normal;
 }
 
+body{
+  overflow-x: hidden;
+}
+
 @theme inline {
   --radius-sm: calc(var(--radius) - 4px);
   --radius-md: calc(var(--radius) - 2px);
