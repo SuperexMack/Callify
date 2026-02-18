@@ -19,7 +19,7 @@ export default function() {
 
     useEffect(()=>{
 
-    socket.current = new WebSocket("ws://localhost:9000")
+    socket.current = new WebSocket("wss://callify-lkp7.onrender.com/")
 
     if(socket.current){
         socket.current.onopen = ()=>{
