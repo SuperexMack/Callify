@@ -61,17 +61,17 @@ export default function() {
   <>
     <div className="w-full h-auto flex flex-col items-center justify-center">
        
-       <div className="w-[50%] flex flex-col mt-[9rem] items-center space-y-9 ">
+       <div className="md:w-[50%] w-full flex flex-col mt-[9rem] items-center space-y-9 ">
 
         <div className="w-full p-2">
-            <h1 className="text-[40px] maintext text-center">Video calls and meetings for everyone</h1>
+            <h1 className="md:text-[40px] text-[35px] maintext text-center">Video calls and meetings for everyone</h1>
         </div>
 
-        <div className="w-[60%]">
+        <div className="md:w-[60%] w-full">
             <p className="text-[20px] text-center">Connect to each other to share thoughts and memories or for creatng future</p>
         </div>
         
-        <div className="flex items-center justify-center space-x-4">
+        <div className="md:flex md:flex-row flex-col md:space-y-0 space-y-4 items-center justify-center space-x-4">
            <div className="flex space-x-2 p-2 border-2 border-white bg-blue-600 rounded-2xl items-center justify-center">
                 <Video className="text-white"></Video>
                 <button onClick={CreateRoom} className="text-white">New Meeting</button>
@@ -80,8 +80,8 @@ export default function() {
                 <Keyboard className="text-black"></Keyboard>
                 <input onChange={(e)=>setRoomName(e.target.value)} className="focus:outline-none focus:ring-0" placeholder="Join Instant Meeting"></input>
            </div>
-           
-           <div>
+            
+           <div className="flex items-center justify-center">
             <button onClick={JoinRoom} className="hover:cursor-pointer">Join</button>
            </div>
 
