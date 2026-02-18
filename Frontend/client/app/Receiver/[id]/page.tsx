@@ -102,15 +102,15 @@ export default function(){
         </div>
         </div> */}
 
-         <div className="mt-[9rem]  w-full h-auto p-2 flex justify-between">
+         <div className="mt-[9rem] w-full h-auto p-2 md:flex md:flex-row flex-col md:space-y-0 space-y-5 justify-between">
             
-            <div className="w-[45%] h-[500px] border-2 border-slate-200 rounded-2xl">
+            <div className="md:w-[45%] w-full md:h-[500px] h-[300px] object-cover border-2 border-slate-200 rounded-2xl">
 
             <video ref={localVideoRef} autoPlay playsInline muted className="w-full h-full loc"></video>
 
             </div>
 
-            <div className="w-[45%] h-[500px] border-2 border-slate-200 rounded-2xl">
+            <div className="md:w-[45%] w-full md:h-[500px] h-[300px] object-cover border-2 border-slate-200 rounded-2xl">
 
             <video ref={remoteVideoRef} autoPlay playsInline muted className="w-full h-full rem"></video>
 
@@ -119,7 +119,7 @@ export default function(){
         </div>
 
         <div className="flex w-full h-auto p-2 items-center justify-center">
-            <div onClick={cutcall} className="flex space-x-5 p-3 rounded-2xl bg-red-500 hover:cursor-pointer">
+            <div onClick={cutcall} className="flex space-x-5 p-3 md:w-auto w-full items-center justify-center rounded-2xl bg-red-500 hover:cursor-pointer">
                  <div><PhoneOff className="text-white"></PhoneOff></div>
                  <div>
                     <h1 className="text-white font-bold">Cut Call</h1>
