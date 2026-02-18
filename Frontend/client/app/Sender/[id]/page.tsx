@@ -2,10 +2,13 @@
 import { useEffect, useRef, useState } from "react"
 import { useParams } from "next/navigation"
 import {Phone, PhoneOff} from "lucide-react"
+import { useRouter } from "next/navigation"
 
 
 
 export default function(){
+
+    const router = useRouter()
 
 
     const socket = useRef<WebSocket|null>(null)
@@ -19,7 +22,7 @@ export default function(){
 
     useEffect(()=>{
       
-      socket.current = new WebSocket("wss://webrtcstruct.onrender.com")
+      socket.current = new WebSocket("ws://localhost:9000")
       
       socket.current.onopen = (()=>{
         socket.current?.send(JSON.stringify({
@@ -75,6 +78,12 @@ export default function(){
     }
 
 
+    const cutcall = ()=>{
+       setTimeout(()=>{
+          router.push("/")
+       },2000)
+    }
+
 
 
     return(
@@ -120,13 +129,13 @@ export default function(){
         </div>
 
         <div className="flex w-full space-x-7 h-auto p-2 items-center justify-center">
-            <div className="flex space-x-5 p-3 rounded-2xl bg-green-500 hover:cursor-pointer">
+            <div onClick={sendMessageOtheSide} className="flex space-x-5 p-3 rounded-2xl bg-green-500 hover:cursor-pointer">
                  <div><Phone className="text-white"></Phone></div>
                  <div>
                     <h1 className="text-white font-bold">Start Video call</h1>
                  </div>
             </div>
-             <div className="flex space-x-5 p-3 rounded-2xl bg-red-500 hover:cursor-pointer">
+             <div onClick={cutcall} className="flex space-x-5 p-3 rounded-2xl bg-red-500 hover:cursor-pointer">
                  <div><PhoneOff className="text-white"></PhoneOff></div>
                  <div>
                     <h1 className="text-white font-bold">Cut Call</h1>

@@ -8,7 +8,6 @@ import { Features } from "../Components/Features"
 
 export default function() {
 
-    const [myKey,setMykey] = useState("")
     const [roomName,setRoomName] = useState("")
     const socket = useRef<WebSocket|null>(null)
 
@@ -18,7 +17,7 @@ export default function() {
 
     useEffect(()=>{
 
-    // socket.current = new WebSocket("wss://webrtcstruct.onrender.com")
+    socket.current = new WebSocket("ws://localhost:9000")
 
     if(socket.current){
         socket.current.onopen = ()=>{
@@ -45,20 +44,16 @@ export default function() {
     },[])
 
    
-
-
-    const generateString = ()=>{
+    const CreateRoom = ()=>{
         let string = random(12,'lower')
-        setMykey(string)
+        socket.current?.send(JSON.stringify({msg:"SENDER",roomId:string}))
     }
 
     const JoinRoom = ()=>{
         socket.current?.send(JSON.stringify({msg:"REMOTE",roomId:roomName}))
+        console.log(roomName)
     }
 
-    const CreateRoom = ()=>{
-        socket.current?.send(JSON.stringify({msg:"SENDER",roomId:roomName}))
-    }
 
 
 
@@ -79,15 +74,15 @@ export default function() {
         <div className="flex items-center justify-center space-x-4">
            <div className="flex space-x-2 p-2 border-2 border-white bg-blue-600 rounded-2xl items-center justify-center">
                 <Video className="text-white"></Video>
-                <button className="text-white">New Meeting</button>
+                <button onClick={CreateRoom} className="text-white">New Meeting</button>
            </div>
             <div  className="flex space-x-2 p-2 focus-within:ring-2 focus-within:border-blue-600 border border-black rounded-lg items-center justify-center">
                 <Keyboard className="text-black"></Keyboard>
-                <input className="focus:outline-none focus:ring-0" placeholder="Join Instant Meeting"></input>
+                <input onChange={(e)=>setRoomName(e.target.value)} className="focus:outline-none focus:ring-0" placeholder="Join Instant Meeting"></input>
            </div>
            
            <div>
-            <h1 className="hover:cursor-pointer">Join</h1>
+            <button onClick={JoinRoom} className="hover:cursor-pointer">Join</button>
            </div>
 
         </div>
