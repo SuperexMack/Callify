@@ -40,8 +40,8 @@ export default function Navbar({feature,works,pricing}:any){
      <div className="w-full z-50 fixed top-0 bg-white h-[80px] border-b border-b-slate-200 flex items-center justify-center">
         <div className="absolute left-[10%] flex items-center justify-center space-x-2">
             <Videotape className="h-[50px] w-[50px] text-blue-900"></Videotape>
-            <Link href={"/"}><h1 className="text-[40px] font-bold text-black" >Callify</h1></Link>
-	      </div>
+            <Link href={"/"}><h1 className="text-[40px] font-bold text-black toptext">Callify</h1></Link>
+	    </div>
 
 	<div className="flex  max-[1000px]:hidden justify-center items-center space-x-5">
 	   <Link onClick={moveToFeature} href={"/"}>Features</Link>
