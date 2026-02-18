@@ -3,6 +3,7 @@ import { Geist, Geist_Mono } from "next/font/google";
 import "./globals.css";
 import Navbar from "./Components/Navbar";
 import Footer from "./Components/Footer";
+import NavbarWrapper from "./Components/NavbarWrapper";
 
 const geistSans = Geist({
   variable: "--font-geist-sans",
@@ -19,15 +20,19 @@ export const metadata: Metadata = {
   description: "A WebRTC-based P2P project for browser-to-browser video and audio streaming platform You can use it to video call your friends or family members.",
 };
 
+
+
 export default function RootLayout({
   children,
 }: Readonly<{
   children: React.ReactNode;
 }>) {
+
+
   return (
     <html lang="en">
       <body>
-        <Navbar></Navbar>
+        <NavbarWrapper></NavbarWrapper>
         {children}
         <Footer></Footer>
       </body>

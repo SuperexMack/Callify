@@ -47,7 +47,6 @@ export default function(){
     const sendMessageOtheSide = async()=>{
         pc.current = new RTCPeerConnection()
 
-
          pc.current.ontrack = (event)=>{
           console.log("Video found")
             console.log("We are getting the video")

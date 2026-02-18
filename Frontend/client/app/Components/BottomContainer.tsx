@@ -1,3 +1,4 @@
+import Link from "next/link"
 export function BottomContainer(){
     return(
         <>
@@ -7,9 +8,9 @@ export function BottomContainer(){
             <h1 className="md:text-[40px] text-[25px] maintext text-center">Make your first call in seconds.</h1>
             </div>
 
-           <div className="md:flex md:flex-row flex-col md:space-y-0  space-y-9 items-center justify-center space-x-7 mt-[50px]">
-               <button className="text-white w-full font-bold rounded-lg bg-orange-500 p-2">Start a free call</button>
-               <button className="text-slate-500 w-[20rem]  hover:text-black font-bold  p-2">See how it works</button>
+           <div className="md:flex md:flex-row flex-col md:space-y-0  items-center justify-center space-x-7 mt-[50px]">
+              <Link href={"/roomsection"}><button className="text-white w-full font-bold rounded-lg bg-orange-500 p-2">Start a free call</button></Link> 
+              <Link href={"https://github.com/SuperexMack"}><button className="text-slate-500 w-full md:w-auto mt-5 md:mt-0 hover:text-black font-bold  p-2">See how it works</button></Link> 
            </div>
 
         </div>

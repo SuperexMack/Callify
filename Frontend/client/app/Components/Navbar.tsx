@@ -46,8 +46,8 @@ export default function Navbar({feature,works,pricing}:any){
 	<div className="flex  max-[1000px]:hidden justify-center items-center space-x-5">
 	   <Link onClick={moveToFeature} href={"/"}>Features</Link>
 	   <Link onClick={moveToworks} href={"/"}>How it works</Link>
-      <Link onClick={moveToprice} href={"/"}>Pricing</Link>
-	   <Link href={"https://github.com/SuperexMack/ffmpeg"}><Github></Github></Link>
+      <Link onClick={moveToprice} href={"/"}>Contact us</Link>
+	   <Link href={"https://github.com/SuperexMack"}><Github></Github></Link>
 	</div>
 
    <div className="absolute min-[1000px]:hidden right-[10%]">
@@ -61,8 +61,8 @@ export default function Navbar({feature,works,pricing}:any){
        <div className="flex z-50 fixed top-0 bg-white absolute top-20 p-4 flex-col  space-y-5 items-center w-full h-auto border-b border-slate-200 shadow-2xl shadow-slate-300">
       <Link onClick={moveToFeature} href={"/"}>Features</Link>
 	   <Link onClick={moveToworks} href={"/"}>How it works</Link>
-      <Link onClick={moveToprice} href={"/"}>Pricing</Link>
-	   <Link href={"https://github.com/SuperexMack/ffmpeg"}><Github></Github></Link>
+      <Link onClick={moveToprice} href={"/"}>Contact us</Link>
+	   <Link href={"https://github.com/SuperexMack"}><Github></Github></Link>
      </div>
        </>
      ):(
