@@ -10,7 +10,7 @@ export function BottomContainer(){
 
            <div className="md:flex md:flex-row flex-col md:space-y-0  items-center justify-center space-x-7 mt-[50px]">
               <Link href={"/roomsection"}><button className="text-white w-full font-bold rounded-lg bg-orange-500 p-2">Start a free call</button></Link> 
-              <Link href={"https://github.com/SuperexMack"}><button className="text-slate-500 w-full md:w-auto mt-5 md:mt-0 hover:text-black font-bold  p-2">Contribute to it</button></Link> 
+              <Link href={"https://github.com/SuperexMack/Callify"}><button className="text-slate-500 w-full md:w-auto mt-5 md:mt-0 hover:text-black font-bold  p-2">Contribute to it</button></Link> 
            </div>
 
         </div>

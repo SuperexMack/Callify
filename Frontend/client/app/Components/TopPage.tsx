@@ -18,7 +18,7 @@ export function TopPagecontent(){
 
            <div className="md:flex md:flex-row md:space-y-0 flex-col space-y-6  items-center justify-center space-x-7 mt-[50px]">
                <Link href={"/roomsection"}><button className="text-white w-full bg-amber-600 font-bold rounded-lg  p-3">Start a free call</button></Link>
-               <Link href={"https://github.com/SuperexMack"}><button className="text-slate-500 md:w-auto hover:cursor-pointer w-full hover:text-black font-bold mt-5 md:mt-0 p-2">Contribute to it</button></Link>
+               <Link href={"https://github.com/SuperexMack/Callify"}><button className="text-slate-500 md:w-auto hover:cursor-pointer w-full hover:text-black font-bold mt-5 md:mt-0 p-2">Contribute to it</button></Link>
            </div>
 
            <div className="p-2 md:w-[70%] w-full md:h-[500px] h-[200px] md:mt-3 flex items-center justify-center">
