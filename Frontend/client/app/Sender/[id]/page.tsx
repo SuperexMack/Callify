@@ -1,7 +1,7 @@
 "use client"
 import { useEffect, useRef, useState } from "react"
 import { useParams } from "next/navigation"
-import {Phone, PhoneOff} from "lucide-react"
+import {Phone, PhoneOff,CloudCheck} from "lucide-react"
 import { useRouter } from "next/navigation"
 import { ToastContainer, toast } from 'react-toastify';
 
@@ -139,6 +139,12 @@ export default function(){
                  <div><PhoneOff className="text-white"></PhoneOff></div>
                  <div>
                     <h1 className="text-white font-bold text-center">Cut Call</h1>
+                 </div>
+            </div>
+             <div onClick={cutcall} className="flex space-x-5 items-center justify-center md:w-auto w-full p-3 rounded-2xl bg-blue-500 hover:cursor-pointer">
+                 <div><CloudCheck className="text-white"></CloudCheck></div>
+                 <div>
+                    <h1 className="text-white font-bold text-center">Room id : {id}</h1>
                  </div>
             </div>
             <ToastContainer></ToastContainer>
