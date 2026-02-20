@@ -49,7 +49,24 @@ export default function(){
     },[])
 
     const sendMessageOtheSide = async()=>{
-        pc.current = new RTCPeerConnection()
+      
+      pc.current = new RTCPeerConnection({
+          iceServers:[
+            {urls:"stun:stun.l.google.com:19302" },
+            
+               {
+              urls: [
+                process.env.NEXT_PUBLIC_URL_1!,
+                process.env.NEXT_PUBLIC_URL_2!,
+                process.env.NEXT_PUBLIC_URL_3!,
+                process.env.NEXT_PUBLIC_URL_4!
+              ],
+              username: process.env.NEXT_PUBLIC_USERNAME!,
+              credential: process.env.NEXT_PUBLIC_CREDENTIAL!
+            }
+            
+          ]
+        })
 
          pc.current.ontrack = (event)=>{
           console.log("Video found")
