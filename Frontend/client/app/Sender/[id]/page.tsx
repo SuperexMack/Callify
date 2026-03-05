@@ -131,13 +131,13 @@ export default function(){
 
         <div className="mt-[9rem] w-full h-auto p-2 md:flex md:flex-row flex-col md:space-y-0 space-y-5 justify-between">
             
-            <div className="md:w-[45%] w-full md:h-[500px] h-[300px] object-cover border-2 border-slate-200 rounded-2xl">
+            <div className="md:w-[45%] w-full md:h-[500px] h-[300px] object-cover border-2 border-slate-200 dark:border-gray-700 rounded-2xl">
 
             <video ref={LocalvideoRef} autoPlay playsInline muted className="w-full h-full loc"></video>
 
             </div>
 
-            <div className="md:w-[45%] w-full md:h-[500px] h-[300px] object-cover border-2 border-slate-200 rounded-2xl">
+            <div className="md:w-[45%] w-full md:h-[500px] h-[300px] object-cover border-2 border-slate-200 dark:border-gray-700 rounded-2xl">
 
             <video ref={RemotevideoRef} autoPlay playsInline muted className="w-full h-full rem"></video>
 

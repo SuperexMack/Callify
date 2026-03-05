@@ -3,7 +3,7 @@ import { AnimatedTestimonialsDemo } from "./FeaturesContent";
 export function Features(){
     return(
         <>
-        <div className="md:w-[60%] w-full mt-[4rem] md:mt-[9rem] flex flex-col md:space-y-0 space-y-5">
+        <div className="md:w-[60%] w-full mt-[4rem] md:mt-[9rem] flex flex-col md:space-y-0 space-y-5 dark:text-white">
   
           <div>
             <h1 className="text-orange-400 text-[20px] font-bold md:text-start md:ml-10 text-center">Features</h1>
@@ -16,7 +16,7 @@ export function Features(){
             </div> 
 
              <div className="md:w-[45%] w-full">
-                 <p className="md:text-[18px] text-[15px] text-center font-medium text-slate-500">
+                 <p className="md:text-[18px] text-[15px] text-center font-medium text-slate-500 dark:text-slate-400">
                     Built lean and focused. We didn't add meeting rooms, 
                     scheduling, or whiteboards we just made one-on-one 
                     calling really, really good.
