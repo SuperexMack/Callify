@@ -4,6 +4,7 @@ import "./globals.css";
 import Navbar from "./Components/Navbar";
 import Footer from "./Components/Footer";
 import NavbarWrapper from "./Components/NavbarWrapper";
+import { ThemeProvider } from "./Components/ThemeProvider";
 
 const geistSans = Geist({
   variable: "--font-geist-sans",
@@ -30,11 +31,13 @@ export default function RootLayout({
 
 
   return (
-    <html lang="en">
+    <html lang="en" suppressHydrationWarning>
       <body>
-        <NavbarWrapper></NavbarWrapper>
-        {children}
-        <Footer></Footer>
+        <ThemeProvider>
+          <NavbarWrapper></NavbarWrapper>
+          {children}
+          <Footer></Footer>
+        </ThemeProvider>
       </body>
      
     </html>

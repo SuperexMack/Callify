@@ -3,6 +3,7 @@ import Link from  "next/link"
 import { Github , List} from 'lucide-react';
 import { Videotape } from 'lucide-react';
 import { useState } from "react";
+import { ThemeToggle } from "./ThemeToggle";
 export default function Navbar({feature,works,pricing}:any){
 
    const [touched,setTouched] = useState(false)
@@ -37,28 +38,30 @@ export default function Navbar({feature,works,pricing}:any){
 
    return(
      <>
-     <div className="w-full z-50 fixed top-0 bg-white h-[80px] border-b border-b-slate-200 flex items-center justify-center">
+     <div className="w-full z-50 fixed top-0 bg-white dark:bg-gray-900 h-[80px] border-b border-b-slate-200 dark:border-b-gray-700 flex items-center justify-center">
         <div className="absolute left-[10%] flex items-center justify-center space-x-2">
             <Videotape className="h-[50px] w-[50px] text-blue-900"></Videotape>
-            <Link href={"/"}><h1 className="text-[40px] font-bold text-black toptext">Callify</h1></Link>
+            <Link href={"/"}><h1 className="text-[40px] font-bold text-black dark:text-white toptext">Callify</h1></Link>
 	    </div>
 
-	<div className="flex  max-[1000px]:hidden justify-center items-center space-x-5">
+	<div className="flex  max-[1000px]:hidden justify-center items-center space-x-5 dark:text-gray-200">
 	   <Link onClick={moveToFeature} href={"/"}>Features</Link>
 	   <Link onClick={moveToworks} href={"/"}>How it works</Link>
       <Link onClick={moveToprice} href={"/"}>Contact us</Link>
 	   <Link href={"https://github.com/SuperexMack"}><Github></Github></Link>
+	   <ThemeToggle />
 	</div>
 
-   <div className="absolute min-[1000px]:hidden right-[10%]">
-       <List onClick={toogle} className="text-black h-[30px] w-[30px]"></List>
+   <div className="absolute min-[1000px]:hidden right-[10%] flex items-center space-x-3">
+       <ThemeToggle />
+       <List onClick={toogle} className="text-black dark:text-white h-[30px] w-[30px]"></List>
    </div>
 
      </div>
 
      {touched?(
        <>
-       <div className="flex z-50 fixed top-0 bg-white absolute top-20 p-4 flex-col  space-y-5 items-center w-full h-auto border-b border-slate-200 shadow-2xl shadow-slate-300">
+       <div className="flex z-50 fixed top-0 bg-white dark:bg-gray-900 absolute top-20 p-4 flex-col  space-y-5 items-center w-full h-auto border-b border-slate-200 dark:border-gray-700 shadow-2xl shadow-slate-300 dark:shadow-gray-900 dark:text-gray-200">
       <Link onClick={moveToFeature} href={"/"}>Features</Link>
 	   <Link onClick={moveToworks} href={"/"}>How it works</Link>
       <Link onClick={moveToprice} href={"/"}>Contact us</Link>

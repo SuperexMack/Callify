@@ -63,14 +63,14 @@ export default function() {
   <>
     <div className="w-full h-auto flex flex-col items-center justify-center">
        
-       <div className="md:w-[50%] w-full flex flex-col mt-[9rem] items-center space-y-9 ">
+<div className="md:w-[50%] w-full flex flex-col mt-[9rem] items-center space-y-9 dark:text-white">
 
         <div className="w-full p-2">
             <h1 className="md:text-[40px] text-[35px] maintext text-center">Video calls and meetings for everyone</h1>
         </div>
 
         <div className="md:w-[60%] w-full">
-            <p className="text-[20px] text-center">Connect to each other to share thoughts and memories or for creatng future</p>
+            <p className="text-[20px] text-center dark:text-gray-300">Connect to each other to share thoughts and memories or for creatng future</p>
         </div>
         
         <div className="md:flex md:flex-row flex-col md:space-y-0 space-y-4 items-center justify-center space-x-4">
@@ -78,13 +78,13 @@ export default function() {
                 <Video className="text-white"></Video>
                 <button onClick={CreateRoom} className="text-white">New Meeting</button>
            </div>
-            <div  className="flex space-x-2 p-2 focus-within:ring-2 focus-within:border-blue-600 border border-black rounded-lg items-center justify-center">
-                <Keyboard className="text-black"></Keyboard>
-                <input onChange={(e)=>setRoomName(e.target.value)} className="focus:outline-none focus:ring-0" placeholder="Join Instant Meeting"></input>
+            <div  className="flex space-x-2 p-2 focus-within:ring-2 focus-within:border-blue-600 border border-black dark:border-gray-500 rounded-lg items-center justify-center">
+                <Keyboard className="text-black dark:text-white"></Keyboard>
+                <input onChange={(e)=>setRoomName(e.target.value)} className="focus:outline-none focus:ring-0 dark:bg-transparent dark:text-white dark:placeholder-gray-400" placeholder="Join Instant Meeting"></input>
            </div>
             
            <div className="flex items-center justify-center">
-            <button onClick={JoinRoom} className="hover:cursor-pointer">Join</button>
+            <button onClick={JoinRoom} className="hover:cursor-pointer dark:text-white">Join</button>
            </div>
 
         </div>
