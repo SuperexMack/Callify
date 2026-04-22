@@ -1,0 +1,14 @@
+FROM node:22
+
+WORKDIR /app
+
+COPY package*.json ./
+
+RUN npm ci
+
+COPY . .
+
+
+EXPOSE 9000
+
+CMD ["sh","-c","npx prisma migrate deploy && node app.js"]
