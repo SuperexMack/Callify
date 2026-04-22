@@ -11,9 +11,22 @@ app.use(express.json())
 
 const wss = new WebSocketServer({server:httpserver})
 
+
+const originList = [
+  "https://callify-mu.vercel.app",
+  "http://localhost:3000",
+  "https://callify.mohitsati.dev"
+]
+
 app.use(cors({
-  //  origin:"https://callify-mu.vercel.app",
-   origin:"http://localhost:3000",
+  origin: function(origin,callback){
+    if(!origin || originList.includes(origin)){
+      callback(null,true)
+    }
+    else{
+      callback(new Error("Not allowed by CORS"))
+    }
+  },
    methods: ["GET", "POST"],
    allowedHeaders : ["Content-Type","Authorization"],
    credentials:true
