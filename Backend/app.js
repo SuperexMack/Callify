@@ -2,18 +2,24 @@
 import { WebSocketServer } from "ws";
 import express from "express"
 import cors from "cors"
+import userLogin from "./Controller/Login.js"
 const app = express()
 const PORT = 9000
 const httpserver = app.listen(PORT)
 
+app.use(express.json())
 
 const wss = new WebSocketServer({server:httpserver})
 
 app.use(cors({
-   origin:"https://callify-mu.vercel.app",
+  //  origin:"https://callify-mu.vercel.app",
+   origin:"http://localhost:3000",
    methods: ["GET", "POST"],
-   allowedHeaders : ["Content-Type","Authorization"]
+   allowedHeaders : ["Content-Type","Authorization"],
+   credentials:true
 }))
+
+app.use("/",userLogin)
 
 app.get("/",(req,res)=>{
   return res.json({msg:"This is the V1 of Callify"})
