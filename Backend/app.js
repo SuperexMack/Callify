@@ -3,9 +3,20 @@ import { WebSocketServer } from "ws";
 import express from "express"
 import cors from "cors"
 import userLogin from "./Controller/Login.js"
+import rateLimit from "express-rate-limit"
 const app = express()
 const PORT = 9000
 const httpserver = app.listen(PORT)
+
+const limiter = rateLimit({
+	windowMs: 1 * 60 * 1000, 
+	limit: 5,
+	standardHeaders: 'draft-8',
+	legacyHeaders: false,
+	ipv6Subnet: 56,
+})
+
+app.use(limiter)
 
 app.use(express.json())
 
