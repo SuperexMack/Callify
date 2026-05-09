@@ -1,0 +1,28 @@
+name: Remote SSH Command
+
+on: [push]
+
+jobs:
+  deploy:
+    name: Building CD pipelines
+    runs-on: ubuntu-latest
+    steps:
+
+      - name: Checkout codee
+        uses: actions/checkout@v2
+
+      - name: Execute CD pipelines
+        uses: appleboy/ssh-action@v1.2.0
+        with:
+          host: 69.62.73.189
+          username: ubuntu
+          key: ${{ secrets.PRIVATE_KEY_VPS }}
+          port: 22
+          script: |
+            cd /home/ubuntu/deployed/Callify
+            git pull origin master
+            cd Backend
+            npm install
+            node app.js
+            pm2 restart callify-app || pm2 start npm --name "callify-app" -- start 
+
