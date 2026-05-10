@@ -23,7 +23,6 @@ jobs:
             git pull origin master
             cd Backend
             npm install
-            node app.js
             pm2 restart callify-app || pm2 start app.js --name "callify-app"
             pm2 save
 
