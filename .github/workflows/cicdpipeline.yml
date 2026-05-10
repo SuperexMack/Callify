@@ -17,7 +17,7 @@ jobs:
           host: 69.62.73.189
           username: ubuntu
           key: ${{ secrets.PRIVATE_KEY_VPS }}
-          port: 22
+          port: 23
           script: |
             cd /home/ubuntu/deployed/Callify
             git pull origin master
