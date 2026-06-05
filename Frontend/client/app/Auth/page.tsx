@@ -8,7 +8,7 @@ export default function () {
 
   const login = async() => {
     toast.success("Github Auth started......")
-    window.location.href =  "http://localhost:9000/auth/github"
+    window.location.href =  "https://callify-lkp7.onrender.com/auth/github"
   };
 
 

@@ -82,7 +82,7 @@ router.get("/auth/github/callback",async(req,res)=>{
         sameSite:"lax",
         maxAge: 7 * 24 * 60 * 60 * 1000,
       })
-      res.redirect(`http://localhost:3000/Auth`)
+      res.redirect(`https://callify.mohitsati.dev/Auth`)
       return
     }
 
@@ -102,7 +102,7 @@ router.get("/auth/github/callback",async(req,res)=>{
         sameSite:"lax",
         maxAge: 7 * 24 * 60 * 60 * 1000,
       })
-      res.redirect(`http://localhost:3000/Auth`)
+      res.redirect(`https://callify.mohitsati.dev/Auth`)
       return
     }
 
